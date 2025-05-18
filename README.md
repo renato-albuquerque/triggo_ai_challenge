@@ -1,5 +1,6 @@
 # triggo.ai challenge
 Teste Técnico - Programa Trainee triggo.ai de Excelência em Engenharia de Dados e DataOps 2025.
+Repositório com as instruções: https://github.com/Triggo-ai4/desafio-data-engineer?utm_campaign=testes_-__programa_trainee_1_edicao_-_reenvio&utm_medium=email&utm_source=RD+Station
 
 ## Objetivo
 Analisar o conjunto de dados históricos de vendas para extrair insights valiosos que possam ajudar nas decisões estratégicas do negócio.
