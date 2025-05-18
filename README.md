@@ -12,7 +12,7 @@ Analisar o conjunto de dados históricos de vendas para extrair insights valioso
 [Link para o dataset no Kaggle.](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 ## Etapas do projeto
-[- Análise exploratória dos dados](exploratory.ipynb)
+- [Análise exploratória dos dados](exploratory.ipynb)
 - Tratamento dos dados
 - Extração de insights para o negócio
 - Visualização e Dashboards
