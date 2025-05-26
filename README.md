@@ -1,5 +1,6 @@
 # triggo.ai challenge
 Teste Técnico - Programa Trainee triggo.ai de Excelência em Engenharia de Dados e DataOps 2025. <br>
+Projeto final unidade 3, Módulo `Python`, Digital College Brasil.
 
 [Repositório com as instruções no GitHub.](https://github.com/Triggo-ai4/desafio-data-engineer?utm_campaign=testes_-__programa_trainee_1_edicao_-_reenvio&utm_medium=email&utm_source=RD+Station)
 
@@ -10,6 +11,9 @@ Analisar o conjunto de dados históricos de vendas para extrair insights valioso
 "Brazilian E-commerce Public Dataset by Olist" disponível no Kaggle. Este dataset contém informações sobre 100.000 pedidos de e-commerce no Brasil realizados entre 2016 e 2018.
 
 [Link para o dataset no Kaggle.](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+
+## Arquitetura do projeto
+![screenshot](images/architecture.png) <br>
 
 ## Etapas do projeto
 - [Análise exploratória dos dados](./jupyter_notebook_files/exploratory_1.ipynb)
