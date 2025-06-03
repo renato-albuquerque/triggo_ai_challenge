@@ -132,6 +132,109 @@ create table dw.fato_opr (
 	review_score INT
 );
 
+-- Carga das tabelas dimensão:
+-- dw.dim_customers.
+insert into dw.dim_customers (
+	customer_id,
+	customer_unique_id,
+	customer_city,
+	customer_state
+) 
+select distinct
+	customer_id,
+	customer_unique_id,
+	customer_city,
+	customer_state
+from stage.st_customers;
+
+select * from dw.dim_customers
+limit 5;
+
+-- dw.dim_sellers
+insert into dw.dim_sellers (
+	seller_id,
+	seller_city,
+	seller_state
+)
+select distinct
+	seller_id,
+	seller_city,
+	seller_state
+from stage.st_sellers;
+
+select * from dw.dim_sellers
+limit 5;
+
+-- dw.dim_products
+insert into dw.dim_products (
+	product_id,
+	product_category_name,
+	product_category_name_english,
+	product_weight_g,
+	product_height_cm,
+	product_length_cm,
+	product_width_cm
+)
+select distinct
+	p.product_id,
+	p.product_category_name,
+	t.product_category_name_english,
+	p.product_weight_g,
+	p.product_height_cm,
+	p.product_length_cm,
+	p.product_width_cm
+from stage.st_products p
+left join stage.st_product_category_name_translation t
+on p.product_category_name = t.product_category_name;
+
+select * from dw.dim_products
+limit 5;
+
+-- dw.dim_orders 
+insert into dw.dim_orders (
+	order_id,
+	order_status,
+	order_purchase_timestamp,
+	order_approved_at,
+	order_delivered_carrier_date,
+	order_delivered_customer_date,
+	order_estimated_delivery_date
+)
+select distinct
+	order_id,
+	order_status,
+	order_purchase_timestamp, --data_compra
+	order_approved_at, --data_aprovacao
+	order_delivered_carrier_date, --data_envio
+	order_delivered_customer_date, --data_entrega_cliente
+	order_estimated_delivery_date TIMESTAMP --data_entrega_prevista
+from stage.st_orders;
+
+select * from dw.dim_orders
+limit 5;
+
+-- dim_time
+insert into dw.dim_time (
+    date,
+    year,
+    month,
+    day,
+    month_name,
+    weekday_name
+)
+select distinct
+    CAST(order_purchase_timestamp AS DATE) AS date,
+    EXTRACT(YEAR FROM order_purchase_timestamp) AS year,
+    EXTRACT(MONTH FROM order_purchase_timestamp) AS month,
+    EXTRACT(DAY FROM order_purchase_timestamp) AS day,
+    TO_CHAR(order_purchase_timestamp, 'Month') AS month_name,
+    TO_CHAR(order_purchase_timestamp, 'Day') AS weekday_name
+FROM stage.st_orders;
+
+select * from dw.dim_time
+limit 5;
+
+-- fato_opr
 
 
 
