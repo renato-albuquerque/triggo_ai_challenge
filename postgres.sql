@@ -235,7 +235,41 @@ select * from dw.dim_time
 limit 5;
 
 -- fato_opr
+insert into dw.fato_opr (
+	order_id, 
+	product_id,
+	seller_id,
+	customer_id,
+	date,
+	price,
+	freight_value,
+	payment_value,
+	payment_type,
+	review_score
+)
+select 
+	oi.order_id,
+    oi.product_id,
+    oi.seller_id,
+    o.customer_id,
+    CAST(o.order_purchase_timestamp as date) as purchase_date,
+    oi.price,
+    oi.freight_value,
+    p.payment_value,
+    p.payment_type,
+    r.review_score
+from stage.st_order_items oi
+left join stage.st_orders o on oi.order_id = o.order_id
+left join stage.st_order_payments p on oi.order_id = p.order_id
+left join stage.st_order_reviews r on oi.order_id = r.order_id;
 
+ALTER TABLE dw.fato_opr
+ADD CONSTRAINT fk_fato_dim_orders
+FOREIGN KEY (order_id)
+REFERENCES dw.dim_orders(order_id);
+
+select * from dw.fato_opr
+limit 10;
 
 
 
