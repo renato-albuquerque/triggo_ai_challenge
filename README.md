@@ -19,10 +19,11 @@ Analisar o conjunto de dados históricos de vendas para extrair insights valioso
 - [Análise exploratória dos dados](./jupyter_notebook_files/exploratory_1.ipynb)
 - [Tratamento dos dados](./jupyter_notebook_files/treatment_load_2.ipynb)
 
-- [Elaboração do Data Warehouse](./sql/postgres.sql) <br>
+- [Elaboração do Data Warehouse](./sql/postgres.sql)
 ![screenshot](images/ERD.png) <br>
 
 - Visualização e Dashboards
+_(Em andamento)_
 
 ### Meus contatos
 - LinkedIn - [renato-malbuquerque](https://www.linkedin.com/in/renato-malbuquerque/)
