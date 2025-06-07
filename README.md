@@ -23,7 +23,7 @@ Analisar o conjunto de dados históricos de vendas para extrair insights valioso
 ![screenshot](images/ERD.png) <br>
 
 - Visualização e Dashboards
-_(Em andamento)_
+![screenshot](images/dashboard_triggo_ai.png) <br>
 
 ### Meus contatos
 - LinkedIn - [renato-malbuquerque](https://www.linkedin.com/in/renato-malbuquerque/)
