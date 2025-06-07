@@ -1,3 +1,4 @@
 .venv
 .env
 sql/ERD.pgerd
+power_bi/dashboard_triggo_ai.pbix
