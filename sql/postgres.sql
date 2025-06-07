@@ -68,6 +68,9 @@ limit 5;
 create schema if not exists dw;
 
 -- Tabelas dimensão x fato.
+-- Modelagem lógica disponível no arquivo README.md.
+
+-- Modelagem física:
 -- Criar tabelas dimensão:
 
 -- dim_customers
@@ -210,7 +213,7 @@ select distinct
 	order_estimated_delivery_date TIMESTAMP --data_entrega_prevista
 from stage.st_orders;
 
-select * from dw.dim_orders
+select * from dw.dim_customers
 limit 5;
 
 -- dim_time
