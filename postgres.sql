@@ -273,7 +273,4 @@ REFERENCES dw.dim_orders(order_id);
 
 select * from dw.fato_opr;
 
-
-
-
-
+-- End.
