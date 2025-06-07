@@ -17,7 +17,7 @@ Analisar o conjunto de dados históricos de vendas para extrair insights valioso
 
 ## Etapas do projeto
 - [Análise exploratória dos dados](./jupyter_notebook_files/exploratory_1.ipynb) - Passos disponíveis no arquivo jupyter notebook.
-- [Tratamento dos dados](./jupyter_notebook_files/treatment_load_2.ipynb) - - Passos disponíveis no arquivo jupyter notebook.
+- [Tratamento dos dados](./jupyter_notebook_files/treatment_load_2.ipynb) - Passos disponíveis no arquivo jupyter notebook.
 
 - [Elaboração do Data Warehouse](./sql/postgres.sql) - Passos disponíveis no arquivo sql. <br>
 ![screenshot](images/ERD.png) <br>
